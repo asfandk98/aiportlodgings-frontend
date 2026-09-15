@@ -278,13 +278,26 @@ export async function getSeasonalPrices(roomId: string | number): Promise<Season
 export interface NearbyHotel {
   id?: string | number;
   slug?: string;
+
   name?: string;
   title?: string;
+
+  location?: string;
+  city?: string;
+
   distance_km?: number | string;
+
+  price?: number | string;
+  pricePerNight?: number | string;
+  active_price?: number | string;
+  original_price?: number | string;
+
+  rating?: number | string;
+
   image?: string;
   image_url?: string;
+  thumbnail?: string;
 }
-
 export interface HotelDetail extends HotelProperty {
   description?: string;
   stars?: number;
